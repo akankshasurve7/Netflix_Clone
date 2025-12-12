@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    /* Your custom CSS here */
+    *{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+background-color: black;
+color: white;
+font-family: "Poppins", sans-serif;
+}
+
+.navbar{
+position: absolute;
+top: 0;
+width: 100%;
+display: flex;
+justify-content: space-between;
+padding: 3% 5%;
+z-index: 10;
+}
+
+.navbar_netflix{
+height: 100%;
+width: 125px;
+font-weight: 200px;
+}
+
+.navbar_nav_items{
+display: flex;
+gap: 10px;
+}
+
+.netflix_logo{
+width: 100%;
+height: 100%;
+}
+
+.language_drop_down{
+background: transparent;
+border: none;
+color: white;
+padding-left: 22px;
+}
+
+.dropdown_container{
+border: 1px solid white;
+padding: 0.4rem;
+border-radius: 4px;
+background: rgba(0,0,0,0.4);
+
+}
+.imgicon{
+position: absolute;
+left: 8px;
+}
+.dropdowm_container{
+position: relative;
+border: 1px solid white;
+padding: 0.4rem;
+border-radius: 4px;
+background: rgba(0, 0, 0, 0.4);
+}
+
+.signin__button{
+border: #dc030f;
+background-color: #dc030f;
+color: white;
+padding: 0.25rem 0.5rem;
+border-radius: 4px;
+height: 35px;
+width: 100px;
+}
+
+.imgsize{
+height: 20px;
+width: 20px;
+}
+
+.default-ltr-cache-1nqqplm{
+position: relative;
+overflow: hidden;
+height: 100%;
+width: 100%;
+}
+
+.default-ltr-cache-1y1tnl9{
+background: rgb(0 0 0 / 40%);
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+}
+
+
+
+
+.hero__card{
+position: absolute;
+top: 30%;
+left: 13%;
+text-align: center;
+display: flex;
+flex-direction: column;
+gap: 10px;
+margin-top: 5%;
+}
+
+.hero__title{
+font-weight: 900;
+font-size: 3rem;
+}
+
+.hero__subtitle,
+.hero__description{
+font-weight: 400;
+font-size: 1.3rem;
+}
+
+.email{
+width: 450px;
+height: 60px;
+color: white;
+padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    border-color: grey;
+    background: transparent;
+}
+
+.get__started{
+font-size: large;
+width: 170px;
+height: 60px;
+background-color: #dc030f;
+border: 1px solid #dc030f;
+color: white;
+}
+
+.card-1,
+.card-2,
+.card-3{
+border-top: 8px rgb(69, 69, 69);
+padding: 80px;
+}
+
+.card-1{
+position: relative;
+display: inline-grid;
+grid-template-columns: 50% 40%;
+text-align: left;
+align-items: center;
+padding: 25px 45px 50px;
+}
+
+.desc-1{
+padding: 80px;
+}
+
+.card-1 video{
+position: relative;
+width: 100%;
+height: 54%;
+grid-column: 2/2;
+grid-row: 1/2;
+z-index: -1;
+}
+
+.card-1 img{
+grid-column: 2/2;
+grid-row: 1/2;
+}
+
+.style-cards h1{
+font-size: 3rem;
+padding: 1rem;
+padding-left: 0;
+}
+
+.style-cards h3{
+font-size: 1.6rem;
+line-height: 2rem;
+}
+
+.card-2{
+position: relative;
+display: inline-grid;
+grid-template-columns: 40% 50%%;
+text-align: left;
+align-items: inherit;
+padding: 25px 45px 50px;
+}
+.desc-2{
+padding: 0;
+}
+
+.card-3{
+position: relative;
+display: inline-grid;
+grid-template-columns: 50% 40%;
+text-align: left;
+align-items: center;
+padding: 25px 45px 50px;
+}
+
+.desc-3{
+padding-left: 80px;
+padding-right: 20px;
+}
+.card-3 img{
+width: 110%;
+grid-column: 2/2;
+grid-row: 1/2;
+}
+
+.card-3 video{
+position: relative;
+top: -87px;
+left: 125px;
+width: 65%;
+height: 78%;
+grid-column: 2/2;
+grid-row: 1/2;
+z-index: -1;
+}
+
+.hr{
+height: 3px;
+border-width: 3px;
+color: darkgrey;
+background-color: darkgrey;
+}
+.netFlixMob{
+display: flex;
+align-items: center;
+}
+
+.card-4{
+position: relative;
+display: inline-grid;
+grid-template-columns: 40% 50%%;
+text-align: left;
+align-items: inherit;
+padding: 25px 45px 50px;
+}
+.desc-4{
+padding: 0;
+}
+
+.h2 {
+    font-size: 45px;
+    font-weight: 900;
+    text-align: center;  
+}
+.footer,
+.footer a{
+color: #999;
+font-size: 0.9rem;
+padding-left: 50px;
+}
+
+.footer p{
+margin-bottom: 1.5rem;
+padding-left: 50px;
+}
+
+.footer .footer-cols{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-gap: 2rem;
+padding-left: 50px;
+}
+
+.footer li{
+line-height: 1.9;
+}
+
+.questions{
+align-items: center;
+margin: 1.5rem;
+}
+
+.ul{
+list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: inherit;
+}
+
+.li{
+transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+    background-color: rgb(65,65,65);
+    text-align: center;
+    padding: 1%;
+    font-size: 800;
+}
+
+.que_h3_tag{
+display: flex;
+    font-size: inherit;
+    font-weight: inherit;
+    margin-bottom: 0.0625rem;
+position: relative;
+    background-color: rgb(45,45,45);
+    color: rgb(255,255,255);
+    transition-duration: 250ms;
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
+}
+
+.button{
+padding: 0.5rem;
+font-size: 100%;
+font-weight: 900px;
+}
+
+.que-box{
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    padding: 0;
+    z-index: 1;
+}
+
+.default-ltr-cache-1cuyn15 {
+    width: 2.25rem;
+    height: 2.25rem;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+.img1{
+    height: 90px;
+    margin-top: 3px;
+}
+
+element.style {
+}
+@media screen and (min-width: 960px)
+.default-ltr-cache-dfy0gt>button {
+    padding: 1.5rem;
+}
+
+.default-ltr-cache-xfttou {
+    /*width: 30%;*/
+   /*height: 20%; */
+
+}
+
+
+.default-ltr-cache-xfttou {
+    padding: 0.2rem 0.45rem;
+}
+
+.default-ltr-cache-xfttou {
+   z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    left: 24%;
+    height: 100px;
+    bottom: 14%;
+    /* -webkit-transform: translateX(-50%); */
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin: 0 auto;
+    background: rgb(0,0,0);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 23%;
+    min-width: 15rem;
+    padding: 0.25rem 0.65rem;
+    border: 2px solid rgba(128,128,128,0.7);
+    box-shadow: 0 0 2em 0 rgb(0,0,0);
+    border-radius: 0.75rem;
+    z-index: 1;
+}
+.default-ltr-cache-1cn8kex {
+    margin: 0 1rem 0 0;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+.df{
+    display: flex;
+}
+.marginclass{
+    margin: 25px;
+}
+.downLodcolr{
+    font-size: 13px;
+    color: skyblue;
+}
+.marginT45 {
+    margin-top: 45px;
+ }
+ .downLodAlign {
+    position: absolute;
+    right: -5px;
+    top: -1px;
+   }
+
+    #bootstrap {
+      display: block !important;
+    }
+
+    .black{
+        background: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <ul class="nav nav-tabs" id="myTabs" role="tablist">
+      <!-- <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="main-tab" data-toggle="tab" data-target="#main" type="button" role="tab" aria-controls="main" aria-selected="true">Main</button>
+      </li> -->
+      <!-- <li class="nav-item" role="presentation">
+        <button class="nav-link" id="jointjs-tab" data-toggle="tab" data-target="#jointjs" type="button" role="tab" aria-controls="jointjs" aria-selected="false">JointJS</button>
+      </li> -->
+    </ul>
+    <div class="tab-content" id="myTabContent">
+     <!--  <div class="tab-pane fade show active" id="main" role="tabpanel" aria-labelledby="main-tab">
+        <button id="move-element-button" class="btn btn-primary" style="margin:10px;">Click to move an element in the JointJS tab</button>
+      </div> -->
+      <div class="tab-pane fade" id="jointjs" role="tabpanel" aria-labelledby="jointjs-tab">
+        <div id="diagram"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script>
+    // Your JavaScript code here
+    const graph = new joint.dia.Graph();
+    const paper = new joint.dia.Paper({
+      el: document.getElementById('diagram'),
+      height: 200,
+      model: graph,
+      frozen: true,
+      sorting: joint.dia.Paper.sorting.APPROX
+    });
+
+    const rect = new joint.shapes.standard.Rectangle({
+      position: { x: 100, y: 30 },
+      size: { width: 120, height: 40 },
+      attrs: {
+        body: {
+          fill: "#0D6EFD",
+          stroke: "none",
+          rx: 2,
+          ry: 2
+        },
+        label: {
+          text: "my box",
+          fill: "#FFFFFF"
+        }
+      }
+    });
+
+    const rect2 = rect.clone();
+    rect2.translate(300);
+
+    const link = new joint.shapes.standard.Link({
+      source: { id: rect.id },
+      target: { id: rect2.id }
+    });
+
+    graph.addCells([rect, rect2, link]);
+
+    $("#myTabs button.nav-link").on("hidden.bs.tab", function (event) {
+      switch (event.target.id) {
+        case "main-tab": {
+          break;
+        }
+        case "jointjs-tab": {
+          paper.freeze();
+          break;
+        }
+      }
+    });
+
+    $("#myTabs button.nav-link").on("shown.bs.tab", function (event) {
+      switch (event.target.id) {
+        case "main-tab": {
+          break;
+        }
+        case "jointjs-tab": {
+          paper.unfreeze();
+          break;
+        }
+      }
+    });
+
+    $("#move-element-button").on("click", function () {
+      rect.translate(0, 10);
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Netflix India- Watch TV Shows Online, Watch Movies Online</title>
+<!-- <link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+</head>
+
+<body>
+<header>
+<nav class="navbar">
+<div class="navbar_netflix">
+<img src="images/logo.png" alt="This is the Netflix Logo" class="netflix_logo" />
+</div>
+<div class="navbar_nav_items">
+<div class="nav_item">
+<div class="dropdowm_container">
+<div class="imgicon"> <img src="images/globe1.png" class="imgsize"></div>
+<select name="language" id="languageSelect" class="language_drop_down">
+<option value="english" selected class="black">English</option>
+<option value="hindi" class="black">Hindi</option>
+             </select>
+         </div>
+          </div>
+            <div class="nav_item">
+<button class="signin__button">Sign In</button>
+</div>
+</div>
+</nav>
+</header>
+<main>
+<section class="hero">
+<div class=" default-ltr-cache-1nqqplm" data-uia="nmhp-card-hero+background">
+<img alt="" aria-hidden="true" data-uia="nmhp-card-hero+background+image" src="https://assets.nflxext.com/ffe/siteui/vlv3/dc1cf82d-97c9-409f-b7c8-6ac1718946d6/14a8fe85-b6f4-4c06-8eaf-eccf3276d557/IN-en-20230911-popsignuptwoweeks-perspective_alpha_website_small.jpg" srcset="https://assets.nflxext.com/ffe/siteui/vlv3/dc1cf82d-97c9-409f-b7c8-6ac1718946d6/14a8fe85-b6f4-4c06-8eaf-eccf3276d557/IN-en-20230911-popsignuptwoweeks-perspective_alpha_website_small.jpg 1000w, https://assets.nflxext.com/ffe/siteui/vlv3/dc1cf82d-97c9-409f-b7c8-6ac1718946d6/14a8fe85-b6f4-4c06-8eaf-eccf3276d557/IN-en-20230911-popsignuptwoweeks-perspective_alpha_website_medium.jpg 1500w, https://assets.nflxext.com/ffe/siteui/vlv3/dc1cf82d-97c9-409f-b7c8-6ac1718946d6/14a8fe85-b6f4-4c06-8eaf-eccf3276d557/IN-en-20230911-popsignuptwoweeks-perspective_alpha_website_large.jpg 1800w" class="default-ltr-cache-ve3cf8 eae08lb0">
+<div class=" default-ltr-cache-1y1tnl9 e1dsrrlm0" style="background-image:linear-gradient(to top, rgba(0, 0, 0, 0.8) 40%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%)" data-uia="nmhp-card-hero+gradient"></div></div>
+</div>
+<div class="hero__card">
+<h1 class="hero__title">
+The biggest Indian hits. Ready to watch here<br/>
+ from ₹ 149.
+</h1><br/>
+<h2 class="hero__subtitle">
+Join today. Cancel anytime.
+</h2><br/>
+<p class="hero__description"><nobr>Ready to watch? Enter your email to create or restart your membership.</nobr><br/>
+<br/><br/>
+  <nobr><input type="email" placeholder="Email Address" class="email"><button class="get__started"><b>Get Started ></b></button></nobr>
+</p>
+</div>
+<hr class="hr">
+</section>
+<section class="style-cards">
+<div class="card-1">
+<div class="desc-1">
+<h1>Enjoy on your TV.</h1>
+<h3>Watch on smart TVs, PlayStation, Xbox, Chromecast,<br/>
+Apple TV, Blu-ray players and more.</h3>
+</div>
+<img src="images/tv.png" alt="Netflix TV">
+<video class="video1" autoplay="" playsinline="" muted="" loop=""><source src="images/video1.m4v" type="video/mp4"></video>
+</div>
+<hr class="hr">
+<div class="card-2 df">
+    <div class="desc-2 netFlixMob df">
+           <img src="mb.jpg" alt="Netflix Mobile" />
+
+          <!--  <div>
+                <div>Stranger THINGS</div>
+                <div> Downloading......</div>
+           </div>
+
+           <div>
+               MOBILE
+           </div>
+
+ -->
+
+             <div data-uia="nmhp-card-animation-asset-motion" class="default-ltr-cache-xfttou e15c37ii6">
+                <div class="default-ltr-cache-1cn8kex df">
+                    <img data-uia="nmhp-card-animation-asset-animation" alt="" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png" class="default-ltr-cache-1t1z3a4 img1">
+
+                    <div class="default-ltr-cache-tcf860 marginclass">
+                        <div id="" class="default-ltr-cache-162uqtg e15c37ii4" data-uia="">
+                            Stranger Things
+                        </div>
+                       <div id="" class="default-ltr-cache-44ib4m e15c37ii3 downLodcolr" data-uia="">
+                         Downloading...
+                       </div>
+                    </div>
+
+                   <!--  <div data-uia="nmhp-card-animation-asset-custom" aria-hidden="true" class="default-ltr-cache-1q4up1i e15c37ii5">  
+                    </div> -->
+                    <div class="downLodAlign">
+                       <!--  <video width="100" height="100" autoplay loop="2">
+                            <source src="C:\Users\User\Downloads\videob.mp4" type="video/mp4">
+                        </video> -->
+                        <video width="100" height="100" autoplay="" playsinline="" muted="" loop="">
+                            <source src="videob.mp4" type="video/mp4">
+                            </video>
+
+                   </div>
+                 
+
+
+               </div>
+            </div>
+    </div>
+    <div class="marginT45">
+        <h1>Download your shows<br>to watch offline.</h1>
+       <h3>Save your favourites easily and always have<br> something to watch.</h3>
+    </div>
+
+</div>
+   
+
+  </div>
+ </div>
+</div>
+<hr class="hr">
+<div class="card-3">
+<div class="desc-3">
+<h1>Watch everywhere</h1>
+<h3>Stream unlimited movies and TV shows on your<br/>
+phone, tablet, laptop, and TV.</h3></div>
+<img src="images/laptop.png" alt="Device">
+ <video class="video2" autoplay="" playsinline="" muted="" loop=""><source src="images/video2.m4v" type="video/mp4"></video>
+</div>
+<hr class="hr">
+<div class="card-4">
+<div class="desc-4 netFlixMob">
+<img src="images/childrens.png" alt="Netflix Childrens" />
+<div>
+          <h1>Create profiles for kids</h1>
+      <h3>Send children on adventures with their favourite<br/>
+       characters in a space made just for them—free with<br/>
+        your membership.</h3>
+  </div>
+ </div>
+</div>
+<hr class="hr"><br/><br/>
+</section>
+</main>
+<!-- <section>
+<main>
+<div class="que-box">
+<h2 data-uia="nmhp-card-faq-text-title" class="h2">Frequently Asked Questions</h2>
+<div class="questions">
+<ul class="ul">
+<li class="li">
+<h3 class="que_h3_tag">
+<button aria-expanded="true" class="button">
+<span data-uia="nmhp-card-faq-accordion+what_is_netflix">What is Netflix?</span>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="e164gv2o4 default-ltr-cache-10uqv88 e1svuwfo1" data-name="Plus" alt=""><path fill-rule="evenodd" clip-rule="evenodd" d="M11 11V2H13V11H22V13H13V22H11V13H2V11H11Z" fill="currentColor"></path></svg>
+</button>
+</h3>
+</li>
+</ul>
+</div>
+   </div>
+</main>
+</section> -->
+<footer class="footer">
+<p>Questions? Call 000-800-919-1694</p>
+<div class="footer-cols">
+<ul>
+<li>FAQ</li>
+<li>Investor Relations</li>
+<li>Privacy</li>
+<li>Speed Test</li>
+</ul>
+<ul>
+<li>Help Center</li>
+<li>Ways to Watch</li>
+<li>Corporate Preferences</li>
+<li>Legal Notices</li>
+</ul>
+<ul>
+<li>Account</li>
+<li>Ways to Watch</li>
+<li>Corporate Information</li>
+<li>Only on Netflix</li>
+</ul>
+<ul>
+<li>Media Center</li>
+<li>Terms of Use</li>
+<li>Contact Us</li>
+</ul><br/><br/>
+</div>
+</footer>
+</body>
+</html>
